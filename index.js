@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 
 // test vong lap neu i = 1 thay vi 0
 // const array1 = [9,2,3,4,5];
@@ -56,3 +58,15 @@ function filter(array4, search){
 }
 
 console.log(filter(array1, "stuff"));
+
+console.log("Hello World");
+
+var users = [
+  { 'user': 'barney',  'active': true },
+  { 'user': 'fred',    'active': false },
+  { 'user': 'pebbles', 'active': false }
+];
+ 
+ const test =_.findLastIndex(users, function(o) { return o.user == 'pebbles'; });
+
+console.log(test);
