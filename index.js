@@ -1,0 +1,51 @@
+
+// test vong lap neu i = 1 thay vi 0
+// const array1 = [9,2,3,4,5];
+
+// const { render } = require("@testing-library/react")
+
+// function sum(arr){
+//     let total = 0;
+
+//     for(i = 1; i < arr.length+1; i++){
+//         total = total + arr[i-1]
+     
+//     }
+//        return total;
+// }
+
+// sum(array1);
+// console.log(sum(array1));
+
+//map
+
+const array1= [{id:1,item:'apple',type:'fruit'},
+            {id:2,item:'banana',type:'fruit'},
+            {id:3,item:'pen',type:'stuff'},
+            {id:4,item:'phone',type:'stuff'}
+]
+// const array2= ["<li id='1'> apple <li>",
+//                 "<li id='2'> banana <li>",
+//                 "<li id='3'> pen <li>",
+//                 "<li id='4'> phone <li>"
+// ]
+const array2 = array1.map(myFunction);
+
+function myFunction(item) {
+    return `<li id = '${item.id}' >  ${item.item } </li>` ;
+  }
+
+console.log(array2);
+
+
+// const array3 = array1.filter(myFunction1);
+
+let positive_array = array1.filter(function(array3) {
+  return array3.type == 'stuff' ; });
+
+// function filter(myFunction1(item2,type,stuff)){
+//     return `${item2 = "type:'stuff'"}`;
+// }
+
+
+console.log(positive_array);
