@@ -56,3 +56,5 @@ function filter(array4, search){
 }
 
 console.log(filter(array1, "stuff"));
+
+console.log("Hello World");
