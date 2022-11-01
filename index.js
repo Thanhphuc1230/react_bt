@@ -24,15 +24,11 @@ const array1= [{id:1,item:'apple',type:'fruit'},
             {id:3,item:'pen',type:'stuff'},
             {id:4,item:'phone',type:'stuff'}
 ]
-// const array2= ["<li id='1'> apple <li>",
-//                 "<li id='2'> banana <li>",
-//                 "<li id='3'> pen <li>",
-//                 "<li id='4'> phone <li>"
-// ]
+
 const array2 = array1.map(myFunction);
 
 function myFunction(item) {
-    return `<li id = '${item.id}' >  ${item.item } </li>` ;
+    return `<li id = '${item.id}' >  ${item.item }, ${item.type } </li>` ;
   }
 
 console.log(array2);
@@ -49,3 +45,14 @@ let positive_array = array1.filter(function(array3) {
 
 
 console.log(positive_array);
+
+//  const search = filter(array1, 'fruit');
+
+function filter(array4, search){
+  const kq = array4.filter( array1 =>array1.type == search)
+
+  return  kq.map(myFunction) 
+;
+}
+
+console.log(filter(array1, "stuff"));
